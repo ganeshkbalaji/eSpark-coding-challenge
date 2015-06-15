@@ -3,7 +3,7 @@ First install Pip
 Run the setup file 
 
 (Optional)
-python setup.py
+<li>python setup.py</li>
 
 (Build and Install)
 <li>python setup.py build</li>
