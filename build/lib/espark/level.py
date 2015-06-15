@@ -26,3 +26,6 @@ class Level(object):
 
     def __eq__(self, other):
         return self.grade == other.grade and self.domain == other.domain
+
+
+py = Level()

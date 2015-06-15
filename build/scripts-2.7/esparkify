@@ -1,24 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 import argparse
 import os
 
 from espark import Student
 from espark import Level
-
-DESC = '''
-DESCRIPTION
-A program to create study paths for students. It accepts two csv files:
-  - domain order
-  - student test scores
-See the README.md for the format of these files.
-
-OUTPUT
-Prints to the screen a path for each student.
-
-NOTES
-The script handles all command-line related input, such as arguments and
-file parsing. The rest is handled by libraries.
-'''
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -26,7 +11,8 @@ def parse_args():
         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument(
         'domain_order',
-        help=("Domain order file as csv. Eg.domain_order.csv"))
+        help=("Domain order file as csv. "
+              "domain_order.csv))
     parser.add_argument(
         'student_tests',
         help=("Student standardized test results as csv. "
@@ -48,7 +34,6 @@ def create_students_from_csv(csv_file):
             levels = [Level(*t) for t in zip(grades, domains)]
             s = Student(name, levels)
             res.append(s)
-
     return res
 
 
@@ -70,9 +55,11 @@ def main():
 
     students = create_students_from_csv(student_file)
     levels = create_levels_from_csv(domain_file)
+
     for student in students:
         path = student.path(levels)
         pathstr = ",".join(str(p) for p in path)
         print "{},{}".format(student.name, pathstr)
+
 if __name__ == '__main__':
     main()

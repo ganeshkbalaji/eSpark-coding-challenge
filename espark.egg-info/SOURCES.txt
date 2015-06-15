@@ -1,0 +1,9 @@
+setup.py
+bin/esparkify
+espark/__init__.py
+espark/level.py
+espark/student.py
+espark.egg-info/PKG-INFO
+espark.egg-info/SOURCES.txt
+espark.egg-info/dependency_links.txt
+espark.egg-info/top_level.txt
