@@ -6,8 +6,8 @@ Run the setup file
 python setup.py
 
 (Build and Install)
-python setup.py build
-sudo python setup.py install
+<li>python setup.py build</li>
+<li>sudo python setup.py install</li>
 
 (Running the file)
 bin/esparkify data/domain_order.csv data/student_tests.csv
