@@ -10,7 +10,7 @@ Run the setup file
 <li>sudo python setup.py install</li>
 
 (Running the file)
-bin/esparkify data/domain_order.csv data/student_tests.csv
+<li>bin/esparkify data/domain_order.csv data/student_tests.csv</li>
 
 == Setup ==
 
