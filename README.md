@@ -1,3 +1,17 @@
+First install Pip
+
+Run the setup file 
+
+(Optional)
+python setup.py
+
+(Build and Install)
+python setup.py build
+sudo python setup.py install
+
+(Running the file)
+bin/esparkify data/domain_order.csv data/student_tests.csv
+
 == Setup ==
 
 Our mission is to provide the best learning experiences to students, personalized
